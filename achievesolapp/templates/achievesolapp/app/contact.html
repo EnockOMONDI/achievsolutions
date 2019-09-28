@@ -1,0 +1,311 @@
+{% extends 'achievesolapp/base.html' %}
+{% load static %}
+
+{% block content %}
+ 
+<div class="page text-center">
+  <!-- Page Head-->
+  <header class="page-header slider-menu-position">
+          <!-- RD Navbar Transparent-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-top-panel rd-navbar-default rd-navbar-white rd-navbar-static-fullwidth-transparent" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="90px" data-lg-stick-up-offset="75px" data-auto-height="false" data-lg-auto-height="true" data-layout="rd-navbar-fixed" data-xs-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+              <div class="rd-navbar-inner">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                  <!-- Navbar Brand-->
+                  <div class="rd-navbar-brand"><img src="{% static "images/3.png" %}" class="img-fluid logo" style="width:230px"   alt="img" ></div>
+                </div>
+                <div class="rd-navbar-menu-wrap">
+                  <div class="rd-navbar-nav-wrap">
+                    <div class="rd-navbar-mobile-scroll">
+                      <div class="form-search-wrap">
+                        <!-- RD Search Form-->
+                        <form class="form-search rd-search" action="search-results.html" method="GET">
+                          <div class="form-group">
+                            <label class="form-label form-search-label form-label-sm rd-input-label" for="rd-navbar-form-search-widget">Search</label>
+                            <input class="form-search-input input-sm form-control form-control-gray-lightest input-sm" id="rd-navbar-form-search-widget" type="text" name="s" autocomplete="off">
+                          </div>
+                          <button class="form-search-submit" type="submit"><span class="fa fa-search"></span></button>
+                        </form>
+                      </div>
+                      <!-- RD Navbar Nav-->
+                      <ul class="rd-navbar-nav">
+                        <li><a href="{% url 'achievesolapp:home' %}"><span>Home</span></a>
+                       
+                        </li>
+                        <li><a href="{% url 'achievesolapp:about' %}" ><span>Who we are</span></a>
+                        
+                        </li>
+                        <li><a href="{% url 'achievesolapp:services' %}" ><span>Our Services</span></a>
+                          
+                        </li>
+                        <li><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
+                        </li>
+                        <li><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                        </li>
+                        <li ><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
+                        </li>
+                        <li><a href="{% url 'achievesolapp:blog_list' %}"  ><span>Blog</span></a>  
+                        </li>
+                        <li class="active" ><a href="{% url 'achievesolapp:contact' %}"  ><span>contact</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- RD Navbar Search-->
+                 
+                </div>
+              </div>
+            </nav>
+          </div>
+      <!-- Modern Breadcrumbs-->
+      <div class="section-height-800 breadcrumb-modern context-dark text-center breadcrumbs-center">
+        <div class="shell section-bottom-120">
+          <div class="veil reveal-md-block">
+            <h3 class="text-bold">Get in Touch</h3>
+            <ul class="list-inline-custom">
+              <li><a class="icon fa fa-facebook  icon-circle icon-gray-light" href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+              <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt" href="https://twitter.com/achievesol" target="_blank"></a></li>
+              <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+    
+            </ul>
+          </div>
+         
+        </div>
+      </div>
+    </header>
+<section class="bg-image bg-image-home-2">
+    <div class="range range-condensed">
+      <div class="cell-xl-9">
+        <div class="shell-fluid section-90 section-md-top-120 ">
+          <div class="range range-xs-center range-md-left text-md-left">
+            <div class="cell-xs-10 cell-sm-8 cell-md-8">
+            
+              <div class="inset-lg-left-30 inset-xl-left-110 inset-lg-right-30">
+                <p></p>
+                <!-- RD Mailform-->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4ruJ7jwF-w-KWBKZUNNOKcPU1IsaRFw-Y10Z-yKsjYXiLmg/viewform?embedded=true" width="670" height="907" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>              </div>
+            </div>
+            <div class="cell-xs-10 cell-sm-8 cell-md-4 offset-top-60 offset-md-top-0 text-left">
+              <h6 class="text-bold"> Follow us on Social media</h6>
+              <hr class="divider">
+              <ul class="list-inline">
+                  <li><a class="icon fa fa-facebook  icon-circle icon-gray-light"   href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+                  <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt"  href="https://twitter.com/achievesol" target="_blank" ></a></li>
+                  <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+
+              </ul>
+              <h6 class="offset-top-60 text-bold">Phones</h6>
+              <hr class="divider">
+              <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-horizontal unit-spacing-xs">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-phone text-matrix"></span></div>
+                <div class="unit-body"><a class="text-gray-light" href="callto:#">+254777329739</a><span> <br> </span><a class="text-gray-light" href="callto:#">+254746626474</a></div>
+              </div>
+              <h6 class="offset-top-60 text-bold">Address</h6>
+              <hr class="divider">
+              <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-horizontal unit-spacing-xs">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-map-marker text-matrix"></span></div>
+                <div class="unit-body">
+                  <address><a class="text-gray-light" href="contacts.html"> 
+                    Warwick Centre, Gigiri., Nairobi</a></address>
+                </div>
+              </div>
+              <h6 class="offset-top-60 text-bold">E-mail</h6>
+              <hr class="divider">
+              <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-horizontal unit-spacing-xs">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-email-outline text-matrix"></span></div>
+                <div class="unit-body"><a class="text-gray-light" href="https://mail.google.com/mail/?tab=wm&ogbl#inbox?compose=new"> <span class="__cf_email__" data-cfemail="b6dfd8d0d9f6d2d3dbd9dadfd8dd98d9c4d1">info@achievesol.org</span></a>
+                <br>
+                <a class="text-gray-light" href="https://mail.google.com/mail/?tab=wm&ogbl#inbox?compose=new"> <span class="__cf_email__" data-cfemail="b6dfd8d0d9f6d2d3dbd9dadfd8dd98d9c4d1">achievesolutions@gmail.com</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell-xl-3">
+        <!-- RD Google Map-->
+        <section class="   rd-map-full-height rd-google-map__model" data-zoom="15" data-y="40.643180" data-x="-73.9874068" data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
+       
+              <iframe src="https://maps.google.com/maps?q=ack%20garden%20house%20nairobi&t=&z=19&ie=UTF8&iwloc=&output=embed" width="1300" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          
+        </section>
+
+       
+    </div>
+  </section>
+  <br>
+  <section class="section-90 section-md-0" >
+    <div class="shell-fluid-full">
+      <div class="range range-xs-center">
+        <div class="cell-xs-10 cell-md-12">
+          <div class="reveal-md-flex">
+            <div class="thumbnail-team-2">
+              <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/africa.png"  %}"  width="384" height="480" alt=""/>
+              </div>
+            
+            </div>
+            <div class="thumbnail-team-2">
+              <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/vision.jpg"  %}" width="384" height="480" alt=""/>
+              </div>
+              
+            </div>
+            <div class="thumbnail-team-2">
+              <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/sdg.jpg"  %}" width="384" height="480" alt=""/>
+              </div>
+            
+            </div>
+         
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+ <!-- Unordered and Ordered Lists-->
+ <footer class="page-footer to-front">
+    <div class="shell-fluid">
+      <div class="text-left section-90 context-dark">
+        <div class="range range-xs-center">
+          <div class="cell-xs-10 cell-sm-8 cell-md-8 cell-lg-6">
+            <div class="inset-md-right-36">
+              <h6 class="text-bold">About Us </h6>
+              <hr class="divider">
+              <p>Achieve Solutions is a leading organization working for a better people. The “People Factory”
+                was registered under the Companies Act in the Republic of Kenya in 2008. We provide quality Training, Motivational talks, Coaching, Team building interventions and
+                other personal development services that address specific needs of one person, a group or
+                organizations of any scale. We run workshops, hold seminars, organize conferences and facilitate business dinners,
+                luncheons and networking events that take a fresh look and feel when we are involved.
+                We exist to bring out the best in individuals, Teams and organizations. Achieve Solutions has a
+                team of resourceful motivators, coaches, mentors and facilitators who are ready and willing to
+                walk with you to new heights.</p>
+            </div>
+          </div>
+          <div class="cell-xs-10 cell-sm-8 cell-md-8 cell-lg-3 offset-top-30 offset-lg-top-0">
+            <div class="inset-xl-right-30">
+              <h6 class="text-bold">Contacts</h6>
+              <hr class="divider">
+              <div class="unit unit-middle unit-horizontal unit-spacing-xs unit-xs-top">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-phone"></span></div>
+                <div class="unit-body">
+                  <div class="p"><a class="text-alto" href="callto:#">+254777329739</a></div>
+                  <div class="p"><a class="text-alto" href="callto:#">+254746626474</a></div> 
+                </div>
+              </div>
+              <div class="unit unit-middle unit-horizontal unit-spacing-xs unit-xs-top offset-top-20">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-email-outline"></span></div>
+                <div class="unit-body">
+                  <div class="p"><a class="text-alto"href="#">info@achievesol.org</a></div>
+                </div>
+              </div>
+              <div class="unit unit-middle unit-horizontal unit-spacing-xs unit-xs-top offset-top-20">
+                <div class="unit-left"><span class="icon icon-sm-size-1 mdi mdi-map-marker"></span></div>
+                <div class="unit-body">
+                  <div class="p"><a class="text-alto" href="contacts.html" style="color:#ffffff">P.O BOX 5820 – 00200 Nairobi,
+                    Kenya</a></div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+          <div class="cell-xs-10 cell-sm-8 cell-md-8 cell-lg-3 offset-top-70 offset-top-10">
+              <div class="cell-xs-10 cell-sm-8 cell-md-8 cell-lg-3 offset-top-70 offset-top-10">
+                  <div class="box-skin-1 box-skin-1-variant-2 box-skin-pos-1">
+                    <h4 class="text-bold">Activities</h4>
+                    <hr class="divider divider-xs divider-white divider-left offset-md-top-10">
+                    <div class="offset-top-20">
+                      <p>Sign up to Achieve solutions’s Services and events.</p>
+                      <!-- RD Mailform-->
+                      <form class="rd-mailform rd-mailform-subscribe text-left offset-md-top-10" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                        <div class="form-group">
+                          <input class="form-control" id="contact-email" type="email" name="email" data-constraints="@Email @Required" placeholder="Enter your e-mail">
+                        </div>
+                        <button class="btn btn-circle btn-white-outline btn-xs offset-top-20 offset-md-top-10" type="submit">subscribe</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="range range-xs-center offset-top-0">
+        <div class="cell-sm-10 cell-md-10 cell-lg-12">
+          <hr>
+        </div>
+      </div>
+      <div class="range range-xs-center range-md-middle offset-top-0 section-40">
+        <div class="cell-xs-10 cell-md-12 cell-lg-2 cell-xl-3 text-lg-left"><a href="index.html"><img src="{% static "images/03.png"  %}" class="img-fluid logo" style="width:150px"  alt="img" ></a></div>
+        <div class="cell-xs-10 cell-md-12 cell-lg-7 cell-xl-6 text-lg-left offset-top-15 offset-lg-top-0">
+          <div class="inset-lg-left-30 inset-xl-left-0">
+            <ul class="list-inline list-inline-lg footer-menu font-accent list-inline-white">
+              <li>Motivational Talks |</li>
+              <li>Training |</li>
+              <li>Coaching |</li>
+              <li>Conferences & Networking Events |</li>
+              <li>Workshops |</li>
+              <li>Seminars |</li>
+              <li>Team buiding</li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="offset-top-35">
+          <ul class="list-inline">
+            <li><a class="icon fa fa-facebook  icon-circle icon-gray-light"   href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+            <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt"  href="https://twitter.com/achievesol" target="_blank" ></a></li>
+            <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+       
+          </ul>
+  </div>
+        <div class="cell-xs-10 cell-md-12 cell-lg-4 tex-lg-right offset-top-15 offset-lg-top-0 text-lg-right">
+          <p class="text-white-05">
+            Achieve solutions 
+            &#169;<span id="copyright-year"></span> Design by <a class="text-alto" href="http://www.brainlabs.co.ke/" target="_blank"> brain Labs
+              <!-- {%FOOTER_LINK}--></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- PhotoSwipe Gallery-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="pswp__bg"></div>
+  <div class="pswp__scroll-wrap">
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__cent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

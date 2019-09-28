@@ -1,0 +1,170 @@
+{% extends 'achievesolapp/base.html' %}
+{% load static %}
+
+{% block title %}
+       {% if blog %}{{ blog.name }} {% else %} Blog {% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Head-->
+      <header class="page-header slider-menu-position">
+              <!-- RD Navbar Transparent-->
+              <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-top-panel rd-navbar-default rd-navbar-white rd-navbar-static-fullwidth-transparent " data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="90px" data-lg-stick-up-offset="75px" data-auto-height="false" data-lg-auto-height="true" data-layout="rd-navbar-fixed" data-xs-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                  <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!-- RD Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                      <!-- Navbar Brand-->
+                      <div class="rd-navbar-brand"><img src="{% static "images/03.png" %}" class="img-fluid logo" style="width:150px"  alt="img" ></div>
+                    </div>
+                    <div class="rd-navbar-menu-wrap">
+                      <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-mobile-scroll">
+                          <div class="form-search-wrap">
+                            <!-- RD Search Form-->
+                            <form class="form-search rd-search" action="search-results.html" method="GET">
+                              <div class="form-group">
+                                <label class="form-label form-search-label form-label-sm rd-input-label" for="rd-navbar-form-search-widget">Search</label>
+                                <input class="form-search-input input-sm form-control form-control-gray-lightest input-sm" id="rd-navbar-form-search-widget" type="text" name="s" autocomplete="off">
+                              </div>
+                              <button class="form-search-submit" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                          <!-- RD Navbar Nav-->
+                          <ul class="rd-navbar-nav">
+                            <li ><a href="index.html"><span>Home</span></a>
+                           
+                            </li>
+                            <li><a href="about.html"><span>About</span></a>
+                            
+                            </li>
+                            <li><a href="services.html"><span>Our services</span></a>
+                              
+                            </li>
+                            <li><a href="programs.html"><span>Our programs</span></a>
+                            </li>
+                            <li><a href="events.html"><span>Events</span></a>
+                            </li>
+                            <li><a href="gallery.html"><span>Gallery</span></a>
+                            </li>
+                            <li class="active" ><a href="blog.html"><span>Blog</span></a>  
+                            </li>
+                            <li><a href="contact.html"><span>contact</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- RD Navbar Search-->
+                     
+                    </div>
+                  </div>
+                </nav>
+              </div>
+      <!-- Modern Breadcrumbs-->
+      <!-- <div class="section-height-800 breadcrumb-modern context-dark text-center breadcrumbs-center">
+        <div class="shell section-bottom-30">
+          <div class="veil reveal-md-block">
+            <h2 class="text-bold">Blog Detail</h2>
+            <ul class="list-inline-custom">
+              <li><a class="icon fa fa-facebook  icon-circle icon-gray-light" href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+              <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt" href="https://twitter.com/achievesol" target="_blank"></a></li>
+              <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+    
+            </ul>
+          </div>
+          <ul class="list-inline list-inline-with-arrows p">
+            <li><a class="text-white" href="blog.html">Back to blogs</a></li>
+            <li>blog detail
+            </li>
+          </ul>
+        </div>
+      </div> -->
+    </header>
+
+      <section class="section-90 section-md-top-120 section-md-bottom-111">
+        <div class="shell-fluid">
+          <div class="range range-xs-center range-md-left text-left">
+             
+            <div class="cell-xs-10 cell-sm-8 cell-md-3"><img class="img-responsive" src="{% static "images/gallery/maryhill/5.jpg" %}" width="420" height="420" alt=""/>
+            </div>
+            <div class="cell-xs-10 cell-sm-8 cell-md-8 offset-top-20 offset-md-top-0">
+              <div class="inset-lg-left-30 inset-lg-right-30 inset-xl-right-55 inset-xl-left-55">
+                    <ul class="list-inline list-inline-lg">
+                            <li><span class="text-middle icon text-primary mdi mdi-tag-outline"></span><a class="text-gray-light text-middle text-italic" href="{{ c.get_absolute_url }}">{{ blog.blogcategory }}</a><span class="text-middle">
+                            </li>
+                            <li><span class="text-middle icon text-primary mdi mdi-account-outline"></span><a class="text-gray-light text-middle text-italic" href="#">Achieve solutions</a>
+                            </li>
+                            <!-- <li><span class="text-middle icon text-primary mdi mdi-comment-outline"></span><a class="text-gray-light text-middle text-italic" href="##comments">2 Comments</a> -->
+                            </li>
+                          </ul>
+                <h4 class="text-bold">{{ blog.blog_name }}</h4>
+                <p class="offset-md-top-20">{{ blog.brief_description}}</p>
+                <div class="offset-top-30 offset-lg-top-20">
+                 
+                  <hr class="offset-top-10 divider">
+                  <p class="offset-md-top-25">
+                      {{ blog.blog_story }}
+                        </p>
+                        <div class="post-bottom reveal-sm-flex range-sm-reverse range-sm-middle range-xs-justify">
+                                <div class="text-sm-right text-md-left text-lg-right inset-md-left-0 offset-top-15 offset-sm-top-0">
+                                  <ul class="list-inline">
+                                    <li><a class="icon fa fa-thumbs-up  icon-silver" href="#"></a></li>
+                                    <li><a class="icon fa fa-thumbs-down  icon-silver" href="#"></a></li>
+                                  </ul>
+                                </div>
+                                <div class="offset-top-15 offset-sm-top-0"><a class="btn btn-circle btn-xs btn-matrix"  style="box-shadow: 0 6px 22px 0 #3b3b3b; "href="#">Comments</a>   <a class="btn btn-circle btn-xs btn-matrix"  style="box-shadow: 0 6px 22px 0 #3b3b3b; " href="{% url 'achievesolapp:blog_list' %}" >Back to blogs</a></div>
+                              </div>
+                </div>
+              
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+     
+
+ <!-- Unordered and Ordered Lists-->
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

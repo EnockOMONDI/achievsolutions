@@ -1,0 +1,227 @@
+{% extends 'achievesolapp/base.html' %}
+{% load static %}
+{% block title %}
+       {% if eventcategory %}{{ eventcategory.name }} {% else %} Events {% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Head-->
+      <header class="page-header slider-menu-position">
+              <!-- RD Navbar Transparent-->
+              <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-top-panel rd-navbar-default rd-navbar-white rd-navbar-static-fullwidth-transparent" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="90px" data-lg-stick-up-offset="75px" data-auto-height="false" data-lg-auto-height="true" data-layout="rd-navbar-fixed" data-xs-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                  <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!-- RD Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                      <!-- Navbar Brand-->
+                      <div class="rd-navbar-brand"><img src="{% static "images/3.png"  %}"  class="img-fluid logo" style="width:260px"   alt="img" ></div>
+                    </div>
+                    <div class="rd-navbar-menu-wrap">
+                      <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-mobile-scroll">
+                          <div class="form-search-wrap">
+                            <!-- RD Search Form-->
+                            <form class="form-search rd-search" action="search-results.html" method="GET">
+                              <div class="form-group">
+                                <label class="form-label form-search-label form-label-sm rd-input-label" for="rd-navbar-form-search-widget">Search</label>
+                                <input class="form-search-input input-sm form-control form-control-gray-lightest input-sm" id="rd-navbar-form-search-widget" type="text" name="s" autocomplete="off">
+                              </div>
+                              <button class="form-search-submit" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                          <!-- RD Navbar Nav-->
+                          <ul class="rd-navbar-nav">
+                            <li><a href="{% url 'achievesolapp:home' %}"><span>Home</span></a>
+                           
+                            </li>
+                            <li><a href="{% url 'achievesolapp:about' %}" ><span>Who we are</span></a>
+                            
+                            </li>
+                            <li><a href="{% url 'achievesolapp:services' %}" ><span>Our Services</span></a>
+                              
+                            </li>
+                            <li><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
+                            </li>
+                            <li  class="active" ><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:blog_list' %}"  ><span>Blog</span></a>  
+                            </li>
+                            <li><a href="{% url 'achievesolapp:contact' %}"  ><span>contact</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- RD Navbar Search-->
+                     
+                    </div>
+                  </div>
+                </nav>
+              </div>
+      <!-- Modern Breadcrumbs-->
+      <div class="section-height-800 breadcrumb-modern context-dark text-center breadcrumbs-center">
+        <div class="shell section-bottom-120">
+          <div class="veil reveal-md-block">
+            <h3 class="text-bold">Events</h3>
+            <ul class="list-inline-custom">
+              <li><a class="icon fa fa-facebook  icon-circle icon-gray-light" href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+              <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt" href="https://twitter.com/achievesol" target="_blank"></a></li>
+              <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+    
+            </ul>
+          </div>
+          <!-- <ul class="list-inline list-inline-with-arrows p">
+      
+            <li><a class="text-white" href="events.html"> <span>UPCOMING EVENTS</span> </a></li>
+            <li><a class="text-white" href="events404.html"><span>PAST EVENTS</span></a></li>
+            
+           
+          </ul> -->
+        </div>
+      </div>
+    </header>
+  
+  
+  <!-- Upcoming Events-->
+  <section class="section-30 section-md-top-30 section-md-bottom-111">
+      <div class="shell-fluid">
+          <!-- <div class="group-xl offset-top-0 offset-md-top-0"></div>
+                  </div> -->
+          <ul class="list-inline "> 
+              <!-- <li><h5 class=" text-bold text-center" style="color:#ff8c00">Upcoming Events</h5> </li>
+              <li> <h5 class=" text-bold text-center"style="color:#ff8c00" >Past Events</h5></li>  -->
+        <li><a class="btn btn-primary btn-circle"  style="box-shadow: 0 6px 22px 0 #575656;"   href="events.html">Upcoming events</a></li> 
+        <li><a class="btn btn-primary-outline btn-circle"  style="box-shadow: 0 6px 22px 0 #575656;"  href="contact.html">Past events</a></li>
+        
+</ul>
+        <div class="range range-xs-center range-md-left text-left">
+            {% for event in events %}
+          <div class="cell-xs-10 cell-sm-8 cell-md-4">
+            <article class="post post-event"><a class="post-image-wrap" href="#">
+                <div class="post-event-date">
+                  <div></div>{{ event.date }}
+                </div><img class="img-responsive" src="{% static "images/pages/events-1-570x330.jpg"  %}"  width="570" height="330" alt=""/></a>
+              <h4 class="text-bold"><a href="#">{{ event.name }}</a></h4>
+              <h4 >{{ event.brief_description }}</h4>
+              <ul class="list-inline list-inline-md">
+                <li><span class="icon mdi mdi-clock text-middle"></span>
+                  <time class="text-middle" datetime="2016-04-30"> {{ event.start_time  }} {{ event.end_time  }} </time>
+                </li>
+                <li><span class="icon mdi mdi-map-marker text-middle"></span><span class="text-middle">{{ event.venue  }} , {{ event.location  }} </span></li>
+                <li><span class="icon mdi mdi-ticket text-middle"></span><span class="text-middle">{{ event.price  }}</span></li>
+              </ul>
+              <a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #575656;" href="event1.html">book now</a>
+            </article>
+          </div>
+               {% endfor %} 
+          <!-- <div class="cell-xs-10 cell-sm-8 cell-md-4 offset-top-60 offset-md-top-0">
+            <article class="post post-event"><a class="post-image-wrap" href="#">
+                <div class="post-event-date">
+                  <div>14</div>September 2019
+                </div><img class="img-responsive" src="{% static "images/pages/events-4-640x370.jpg"  %}"  width="570" height="330" alt=""/></a>
+                <h4 class="text-bold"><a href="#">Unleash your Pearl</a> <br>(Talk)</h4>
+              <h4>Become the best version of yourself</h4> 
+              <ul class="list-inline list-inline-md">
+                  <li><span class="icon mdi mdi-clock text-middle"></span>
+                    <time class="text-middle" datetime="2016-04-30">9:00am</time>
+                  </li>
+                  <li><span class="icon mdi mdi-map-marker text-middle"></span><span class="text-middle">Serena Hotel, Nairobi</span></li>
+                  <li><span class="icon mdi mdi-ticket text-middle"></span><span class="text-middle">KES 4,500</span></li>
+                </ul>
+   <a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #575656;" href="event2.html">book now</a>
+            </article>
+          </div> -->
+          <!-- <div class="cell-xs-10 cell-sm-8 cell-md-4 offset-top-60 offset-md-top-0">
+            <article class="post post-event"><a class="post-image-wrap" href="#">
+                <div class="post-event-date">
+                  <div>12</div>October 2019
+                </div><img class="img-responsive" src="{% static "images/pages/events-3-570x330.jpg"  %}"  width="570" height="300" alt=""/></a>
+              <h4 class="text-bold"><a href="#" >Building change makers </a> <br>(Talk)</h4>
+              <h4 >Steps to becoming</h4> 
+              <ul class="list-inline list-inline-md">
+                <li><span class="icon mdi mdi-clock text-middle"></span>
+                  <time class="text-middle" datetime="2016-04-30">9:00 -12 noon </time>
+                </li>
+                <li><span class="icon mdi mdi-map-marker text-middle"></span><span class="text-middle">To be updated soon</span></li>
+                <li><span class="icon mdi mdi-ticket text-middle"></span><span class="text-middle">KES 5,000</span></li>
+              </ul>
+   <a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #575656;" href="event3.html">book now</a>            </article>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Full-Width Layout-->
+    <section class="section-90 section-md-0" >
+      <div class="shell-fluid-full">
+        <div class="range range-xs-center">
+          <div class="cell-xs-10 cell-md-12">
+            <div class="reveal-md-flex">
+              <div class="thumbnail-team-2">
+                <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/africa.png"  %}"   width="384" height="480" alt=""/>
+                </div>
+              
+              </div>
+              <div class="thumbnail-team-2">
+                <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/vision.jpg"  %}"  width="384" height="480" alt=""/>
+                </div>
+                
+              </div>
+              <div class="thumbnail-team-2">
+                <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/sdg.jpg"  %}"  width="384" height="480" alt=""/>
+                </div>
+              
+              </div>
+           
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+ <!-- Unordered and Ordered Lists-->
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}

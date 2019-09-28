@@ -1,0 +1,686 @@
+{% extends 'achievesolapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Head-->
+      <header class="page-header slider-menu-position" >
+              <!-- RD Navbar Transparent-->
+              <div class="rd-navbar-wrap">
+                <nav class=" rd-navbar rd-navbar-top-panel rd-navbar-default rd-navbar-white rd-navbar-static-fullwidth-transparent " data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="90px" data-lg-stick-up-offset="75px" data-auto-height="false" data-lg-auto-height="true" data-layout="rd-navbar-fixed" data-xs-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" >
+                  <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!-- RD Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                      <!-- Navbar Brand-->
+                      <div class="rd-navbar-brand"><img src="{% static "images/3.png" %}"  class="img-fluid logo" style="width:260px"  alt="img" ></div>
+
+                    </div>
+                    <div class="rd-navbar-menu-wrap">
+                      <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-mobile-scroll">
+                          <div class="form-search-wrap">
+                            <!-- RD Search Form-->
+                            <form class="form-search rd-search" action="search-results.html" method="GET">
+                              <div class="form-group">
+                                <label class="form-label form-search-label form-label-sm rd-input-label" for="rd-navbar-form-search-widget">Search</label>
+                                <input class="form-search-input input-sm form-control form-control-gray-lightest input-sm" id="rd-navbar-form-search-widget" type="text" name="s" autocomplete="off">
+                              </div>
+                              <button class="form-search-submit" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                          <!-- RD Navbar Nav-->
+                          <ul class="rd-navbar-nav">
+                            <li class="active"><a href="{% url 'achievesolapp:home' %}"><span>Home</span></a>
+                           
+                            </li>
+                            <li><a href="{% url 'achievesolapp:about' %}" ><span>Who we are</span></a>
+                            
+                            </li>
+                            <li><a href="{% url 'achievesolapp:services' %}" ><span>Our Services</span></a>
+                              
+                            </li>
+                            <li><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:blog_list' %}"  ><span>Blog</span></a>  
+                            </li>
+                            <li><a href="{% url 'achievesolapp:contact' %}"  ><span>contact</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- RD Navbar Search-->
+                     
+                    </div>
+                  </div>
+                </nav>
+              </div>
+        <div class="bg-image bg-image-home-1 section-90 section-sm-top-111 section-md-0 section-home-intro secction-relative">
+          <div class="shell-fluid">
+            <div class="range range-xs-center text-md-left context-dark">
+              <div class="cell-md-4 veil reveal-md-block cell-md-bottom">
+                <div class="section-md-top-15"><img class="img-responsive home-intro-img" src="{% static "images/pages/home883.png"  %}"  width="883" height="783" alt=""/>
+                </div>
+              </div>
+              <div class="cell-sm-12 cell-md-7 cell-md-middle">
+                <div class="inset-md-left-20 inset-lg-left-15 inset-xl-left-90 section-md-34 section-lg-0">
+                  <h1 class="text-bold  text-bold ">
+                   Investing in People</h1>
+<!--                   
+                  <ul class="list-inline-custom2">
+                    <li><a class="icon fa fa-facebook  icon-circle icon-gray-light" href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+                    <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt" href="https://twitter.com/achievesol" target="_blank"></a></li>
+                    <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+          
+                  </ul> -->
+                  <div class="offset-top-30 offset-xl-top-55">
+                    <div class="group">
+                      <div><a class="btn btn-circle btn-primary " style="box-shadow: 0 6px 22px 0 #000000; color: #000000" href="{% url 'achievesolapp:services' %}">view all services</a></div>
+                      <!-- <div><a class="btn btn-circle btn-white-outline" href="#">learn more</a></div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+<!--  Empowerment Motivation Transformation -->
+ <section style="border-bottom: 1px solid #ff7b00; border-top: 1px solid #ff7b00"   class="bg-image bg-image-home-2 section-40 section-md-40 "  >
+     <div class="inset-lg-left-51 inset-lg-right-51 offset-top-0" >
+          <div class="shell-fluid-full">
+             <div>
+                <ul class="list-inline text-center "> 
+                   <li> <h3 class="text-bold  text-center " > Motivation </h3></li>
+                   <li> <h3 class="text-bold  text-center " > Empowerment </h3></li>
+                   <li> <h3 class="text-bold  text-center " > Transformation</h3></li>
+              </div>    
+          </div>
+       </div>
+  </section>
+
+ 
+<!-- what we do -->
+<section class="bg-image bg-image-home-2 section-40 section-md-top-30 section-md-bottom-30 ">
+   <h3 class="text-bold text-center ">What we do</h3><br>
+      <div class="inset-md-left-50 inset-md-right-50 ">
+         <p >We provide training and personal development services that address specific needs and achieve positive outcomes. We assist individuals to access their own personal resources, capabilities and qualities to achieve defined goals. Our strategy and objectives relate to People Empowerment, Team Development & Organization Success. At achieve solutions, we deal with your challenges today and reshape your future now.
+      </div>
+          <div class="range range-xs-center range-md-left text-left text-md-center text-lg-left">
+
+
+            <!--Motivational Talks  area -->
+            <div class="cell-xs-10 cell-sm-10 cell-md-6 offset-top-60 offset-md-top-30">
+               <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-horizontal unit-spacing-md unit-xs-top">
+                 <div class="unit-left">
+        
+
+                    <div class="blog2-card " >
+                      <div class="meta">
+                      <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
+                          <ul class="details">
+                          </ul>
+                      </div>
+                       <div class="description">
+                          <h1>Motivational Talks</h1> 
+                          <p> <br> We motivate, challenge, empower and transform our audience. Our talks will ignite you and make you bigger than your life challenge(s).  At achieve Solutions we strongly remind people not to  give up as we work with them to achieve defined goals. As an organization we believe that everyone has immense ability to change their lives for better. At Achieve Solutions, we support you every step of the way as we boost your confidence & uplift your spirit. The talks are simply inspirational.</p>
+          
+                       </div>
+                     </div>
+                  </div>   
+                </div>
+              </div>
+               <!--End of Motivational Talks  area -->
+
+               <!--Workshops, Seminars,Conference and Networking area -->
+               <div class="cell-xs-10 cell-sm-10 cell-md-6 offset-top-60 offset-md-top-30">
+                  <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-horizontal unit-spacing-md unit-xs-top">
+                    <div class="unit-left">
+           
+   
+                       <div class="blog2-card " >
+                         <div class="meta">
+                         <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
+                             <ul class="details">
+                             </ul>
+                         </div>
+                          <div class="description">
+                             <h1>Workshops, Seminars,Conference and Networking</h1>
+                             <p>We hold theme based events and share knowledge, theories and practices to equip individuals, teams and organizations to stay one step ahead of the competition. We focus on moulding and building the capacity of individuals, staff members, innovators, entrepreneurs and young professionals for knowledge, wisdom, skills building and excellent learning experience.</p>
+                          </div>
+                        </div>
+                     </div>   
+                   </div>
+                 </div>
+                  <!--End of Workshops, Seminars,Conference and Networking area -->
+
+                 <!--Workshops, Seminars,Conference and Networking area -->
+                 <div class="cell-xs-10 cell-sm-10 cell-md-6 offset-top-60 offset-md-top-30">
+                    <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-horizontal unit-spacing-md unit-xs-top">
+                      <div class="unit-left">
+             
+     
+                         <div class="blog2-card " >
+                           <div class="meta">
+                           <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
+                               <ul class="details">
+                               </ul>
+                           </div>
+                            <div class="description">
+                               <h1>Team – Building Facilitation </h1>
+                                 <p>We support individuals, teams and organizations to harness their collective energy and to develop a “Togetherness brain” approach that improves the way we supervise, manage, lead and relate as teams.
+                                    
+                                    </p>
+                            </div>
+                          </div>
+                       </div>   
+                     </div>
+                   </div>
+                    <!--End of Workshops, Seminars,Conference and Networking area --> 
+
+                     <!--Training area -->
+                 <div class="cell-xs-10 cell-sm-10 cell-md-6 offset-top-60 offset-md-top-30">
+                    <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-horizontal unit-spacing-md unit-xs-top">
+                      <div class="unit-left">
+             
+     
+                         <div class="blog2-card " >
+                           <div class="meta">
+                           <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
+                               <ul class="details">
+                               </ul>
+                           </div>
+                            <div class="description">
+                               <h1>Training </h1>
+                                <p>We offer impactful cutting edge training. Our creative and innovative methodologies create a lasting environment for learning. Be part of goal achievers at achieve solutions where training solutions are shared with passion and commitment.
+                              <br><br><br>
+                                </p>
+                            </div>
+                          </div>
+                       </div>   
+                     </div>
+                   </div>
+                    <!--End of Training area -->
+
+           </div> 
+
+           <!--End of Training area --> 
+                                     <div class="offset-top-30 offset-xl-top-55">
+                                       <div class="group text-center">
+                                           <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #494949;" href="{% url 'achievesolapp:services' %}">view all Services</a></div>
+                                        </div>
+                                       </div>
+
+  </section>
+<!-- End of what we do -->
+
+  
+
+
+
+
+  <!-- events -->
+<section class="bg-image bg-image-home-2 section-60 section-sm-40">
+    <div class="shell-fluid">
+          <h3 class="text-bold text-center "  >Upcoming Events</h3>
+            
+               <div class="range range-xs-center text-md-center">
+                
+                    <div class="cell-xl-10">
+              <!-- Owl Carousel-->
+              {% for event in events %} 
+                        <div class="owl-carousel owl-carousel-nav-pos-xl text-left" data-autoplay="true"  data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-lp-items="5" data-stage-padding="15px" data-md-stage-padding="0" data-loop="true" data-margin="30" data-md-margin="10px" data-mouse-drag="false" data-nav="true" data-animation-in="fadeIn" data-animation-out="fadeIn">
+                          
+                          <div>  
+                                         
+                              <article class="post-event-minimal">
+                                 <div class="post-body">
+                                     <h6 class="text-bold"><a href="events.html"> {{ event.name }} </a>  </h6>
+                                       <ul> 
+                                         <li><span class="icon mdi fa fa-meetup text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark">{{ event.venue }}</span></li>
+                                         <li><span class="icon mdi mdi-map-marker text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark">  {{ event.location }}</span></li>
+                                         <li><span class="icon mdi mdi-calendar text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> {{ event.date }} </span></li>
+                                       </ul>
+                                   <div class="post-bottom">
+                                   <div class="group">
+                                   <div><a class="btn btn-xs btn-circle btn-matrix" href="events.html">see details</a></div>
+
+                                  </div>
+                                  </div>
+                                  </div>
+                              </article>  
+                                        
+                          </div>  
+                                
+                         </div> 
+                         {% endfor %}          
+                                     <div class="offset-top-30 offset-xl-top-55">
+                                        <div class="group">
+                                       <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #494949;" href="{% url 'achievesolapp:product_list' %}">view all Events</a></div>               
+                                       </div>
+                                     </div>
+                                 
+                       </div>
+                               
+               </div>      
+    </div>
+</section>
+ <!--End of events -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section-90 section-md-top-60 section-md-bottom-100 bg-qua-haze">
+        <div class="shell-fluid">
+          <h3 class="text-bold text-center "  >Inspiring Quotes</h3> <br>
+          <!-- Owl Carousel-->
+          <div class="owl-carousel text-left" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true" data-items="1" data-sm-items="2" data-md-items="3" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots="true">
+            <div class="owl-item">
+
+
+
+                <div class="cardotes">
+                    <div class="profile2-sidebar">
+                            <img class="profile2-image" src="{% static "images/gallery/githogoro/mandela.jpeg"  %}"    alt=""/>
+                     
+                    </div>
+                    <div class="profile2-main">
+                        <h2 class="profile2-name">Nelson Mandela</h2>
+                        <p class="profile2-position">Political leader - South African First black head of state</p>
+                        <p class="profile2-body"> "Education is the most powerful weapon which you can use to change the world."</p>
+                    </div>
+                </div>
+              </div>
+
+
+
+              <div class="owl-item">
+                  <div class="cardotes">
+                      <div class="profile2-sidebar">
+                              <img class="profile2-image" src="{% static "images/gallery/githogoro/kipkip.jpg"  %}"    alt=""/>
+                       
+                      </div>
+                      <div class="profile2-main">
+                          <h2 class="profile2-name">Eluid Kipchoge Keino</h2>
+                          <p class="profile2-position">Kenyan long distance runner</p>
+                          <p class="profile2-body"> "Passion is a choice. You need to choose to be great. It's not a chance, it's a choice."</p>
+                      </div>
+                  </div>
+                </div>
+
+
+                  
+              <div class="owl-item">
+                  <div class="cardotes">
+                      <div class="profile2-sidebar">
+                              <img class="profile2-image" src="{% static "images/gallery/githogoro/mathaiii.jpg"  %}"    alt=""/>
+                       
+                      </div>
+                      <div class="profile2-main">
+                          <h2 class="profile2-name">Wangari Maathai</h2>
+                          <p class="profile2-position">Social, environmental activist & first African woman to win the Nobel Prize</p>
+                          <p class="profile2-body"> "There are opportunities even in the most difficult moments."</p>
+                      </div>
+                  </div>
+                </div>
+
+    
+                <div class="owl-item">
+                    <div class="cardotes">
+                        <div class="profile2-sidebar">
+                                <img class="profile2-image" src="{% static "images/gallery/githogoro/wili.jpg"  %}"    alt=""/>
+                         
+                        </div>
+                        <div class="profile2-main">
+                            <h2 class="profile2-name">William Barclay</h2>
+                            <p class="profile2-position">Scottish author, radio and television presenter, Church of Scotland minister, and Professor of Divinity and Biblical Criticism at the University of Glasgow.</p>
+                            <p class="profile2-body"> "Endurance is not just the ability to bear a hard thing, but to turn it into glory."</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="owl-item">
+                      <div class="cardotes">
+                          <div class="profile2-sidebar">
+                                  <img class="profile2-image" src="{% static "images/gallery/githogoro/obama.jpg"  %}"    alt=""/>
+                           
+                          </div>
+                          <div class="profile2-main">
+                              <h2 class="profile2-name">Barrack Obama</h2>
+                              <p class="profile2-position">44th president of the United States</p>
+                              <p class="profile2-body"> "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek."</p>
+                          </div>
+                      </div>
+                    </div>
+
+
+                <div class="owl-item">
+                    <div class="cardotes">
+                        <div class="profile2-sidebar">
+                                <img class="profile2-image" src="{% static "images/gallery/githogoro/mari.jpg"  %}"    alt=""/>
+                         
+                        </div>
+                        <div class="profile2-main">
+                            <h2 class="profile2-name">Marie curie</h2>
+                            <p class="profile2-position">First woman to win a Nobel Prize</p>
+                            <p class="profile2-body"> "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less."</p>
+                        </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+    
+        
+    
+ 
+            </div>
+          </div>
+</section>
+        <!--Posts-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Inspiring Feedback-->
+      <!-- <section class="section-90 section-md-top-120 section-md-bottom-111">
+        <div class="shell-fluid">
+          <h2 class=" text-bold">Testimonials</h2>
+          <div class="range range-xs-center">
+            <div class="cell-xs-10 cell-md-6"> -->
+              <!-- Owl Carousel-->
+              <!-- <div class="owl-carousel owl-flex ow-nav-vertical" data-items="1" data-margin="15" data-sm-margin="0" data-loop="false" data-stage-padding="0" data-mouse-drag="false" data-nav="true">
+                <div class="owl-item">
+                  <blockquote class="quote quote-classic inset-md-right-55">
+                    <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-vertical unit-spacing-lg">
+                      <div class="unit-left text-center"><img class="img-responsive img-circle" src="{% static "images/users/user-james-160x160.jpg"  %}"   width="160" height="160" alt=""/>
+                        <div class="quote-author">
+                          <cite class="text-bold text-matrix">James Edwards</cite>
+                        </div>
+                      </div>
+                      <div class="unit-body text-left">
+                        <div class="quote-body h5">
+                          <q>I've always been a believer and a do-it-yourself kind of guy. But the loss of my sister earlier this year has wounded me too deep to recover from it immediately. My business suffered a severe downtime, but Jordan’s training helped me get back on the right path.</q>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="owl-item">
+                  <blockquote class="quote quote-classic inset-md-right-55">
+                    <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-vertical unit-spacing-lg">
+                      <div class="unit-left text-center"><img class="img-responsive img-circle" src="{% static "images/users/user-kathleen-mallon-160x160.jpg"  %}"   width="160" height="160" alt=""/>
+                        <div class="quote-author">
+                          <cite class="text-bold text-matrix">Kathleen O'Mallon</cite>
+                        </div>
+                      </div>
+                      <div class="unit-body text-left">
+                        <div class="quote-body h5">
+                          <q>After a tough divorce that I've lived through recently and a nervous breakdown that I've had afterward, I definitely needed something motivational to hold on to... Mr. Turner’s philosophy and incredible energy were the cures for me!</q>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="owl-item">
+                  <blockquote class="quote quote-classic inset-md-right-55">
+                    <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-vertical unit-sm-horizontal unit-xs-vertical unit-spacing-lg">
+                      <div class="unit-left text-center"><img class="img-responsive img-circle" src="{% static "images/users/user-anyhony-160x160.jpg"  %}"   width="160" height="160" alt=""/>
+                        <div class="quote-author">
+                          <cite class="text-bold text-matrix">Anthony Davidson</cite>
+                        </div>
+                      </div>
+                      <div class="unit-body text-left">
+                        <div class="quote-body h5">
+                          <q>I felt like if I was but a lone ship, sailing in the stormy weather across the ocean. Thankfully, one of my good friends, Alberta, referred me to attend one of the motivational events, held by Mr. Turner. That was truly a game-changing moment in my life!</q>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-10 cell-md-6 cell-xl-5 cell-xl-preffix-1 offset-top-60 offset-md-top-0 section-with-images-2 veil reveal-md-flex range">
+              <div class="cell-md-8">
+                <div class="first-image-wrap"><img class="img-responsive" src="{% static "images/pages/home-1-569x451.jpg"  %}"   width="569" height="451" alt=""/>
+                </div>
+              </div>
+              <div class="cell-md-8">
+                <div class="second-image-wrap"><img class="img-responsive" src="{% static "images/pages/home-2-569x451.jpg"  %}"   width="569" height="451" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+<!-- 
+      <section class="section-90 section-md-120 bg-gray-dark bg-gray-gradient-after context-dark to-front">
+        <div class="shell-fluid">
+          <h2 class="text-bold  text-md-left">Books</h2>
+          <div class="range range-xs-center offset-top-60">
+            <div class="cell-xs-10 cell-md-8">
+              <div class="range">
+                <div class="cell-sm-4">
+                  <div class="event-item event-item-hover"><img class="img-responsive" src="{% static "images/shop/book-7-201x296.jpg"  %}"   width="201" height="296" alt=""/>
+                    <h6 class="text-bold"><a href="single-event.html">Unstoppable Faith</a></h6>
+                    <div class="h4 text-bold text-italic">$59.00</div><a class="btn btn-xs btn-circle btn-primary" href="single-event.html">see details</a>
+                  </div>
+                </div>
+                <div class="cell-sm-4 offset-top-50 offset-sm-top-0">
+                  <div class="event-item event-item-hover"><img class="img-responsive" src="{% static "images/shop/book-8-201x296.jpg"  %}"   width="201" height="296" alt=""/>
+                    <h6 class="text-bold"><a href="single-event.html">Unleash The Power Within</a></h6>
+                    <div class="h4 text-bold text-italic">$59.00</div><a class="btn btn-xs btn-circle btn-primary" href="single-event.html">see details</a>
+                  </div>
+                </div>
+                <div class="cell-sm-4 offset-top-50 offset-sm-top-0">
+                  <div class="event-item event-item-hover"><img class="img-responsive" src="{% static "images/shop/book-9-201x296.jpg"  %}"   width="201" height="296" alt=""/>
+                    <h6 class="text-bold"><a href="single-event.html">Date With Destiny</a></h6>
+                    <div class="h4 text-bold text-italic">$59.00</div><a class="btn btn-xs btn-circle btn-primary" href="single-event.html">see details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-10 cell-md-4 offset-top-60 offset-md-top-0">
+              <div class="inset-xl-left-70 text-md-left">
+                <div class="box-skin-1 box-skin-1-variant-1">
+                  <h3 class="text-bold">A Few Words<br>About Jordan Turner</h3>
+                  <hr class="divider divider-xs divider-white offset-top-20">
+                  <div class="offset-top-50">
+                    <p>Jordan Turner, better known at his North-Western University alma mater's Debate Classes as "the Motivator" is a rock star in the motivational speeches business!</p>
+                    <p>His expertise, his philosophy and ethic programs, his books and his events, attended by thousands of people yearly are famous across the US...</p>
+                    <p>Though, while he enjoys a certain level of success and fame now, it hasn't always been like that!</p>
+                    <p>It’s hard to believe, but in his high school years, Jordan Turner was a timid and shy boy!</p>
+                    <p>Eventually overcoming his tepid qualities was a stepping stone for him, as he found joy in helping thousands of people more to step up a little bit further!</p>
+                  </div>
+                  <div class="offset-top-50"><a class="btn btn-circle btn-white-outline" href="overview.html">learn more</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!--Posts-->
+     
+      <!-- <section class="section-90 section-md-120 section-md-bottom-111">
+        <div class="shell-fluid">
+          <h2 class="text-bold ">Latest Blog2 Posts</h2>
+          <div class="range range-xs-center offset-top-60">
+            <div class="cell-xs-10 cell-sm-10 cell-md-12">
+              <div class="range">
+                <article class="post post-masonry cell-md-4 post-masonry-variant-1">
+                  <div class="post-wrap"><a class="img-wrap" href="post-page.html"><img class="img-responsive" src="{% static "images/blog2/blog2-masonry-1-570x360.jpg"  %}"   width="570" height="360" alt=""/></a>
+                    <div class="post-body">
+                      <div class="post-meta">
+                        <ul class="list-inline list-inline-lg">
+                          <li><span class="text-middle icon text-primary mdi mdi-calendar"></span><span class="text-middle">2 days ago</span>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-account-outline"></span><a class="text-gray-light text-middle" href="masonry-blog2.html">Jordan Turner</a>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-comment-outline"></span><a class="text-gray-light text-middle" href="post-page.html#comments">2 Comments</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <h4 class="text-bold inset-lg-right-15"><a href="post-page.html">The Biggest Differences Between an Introvert and Narcissist</a></h4>
+                      <p class="inset-lg-right-30">If you've ever wondered what kind of a personality you currently have (because, as say, you can always alter it anytime), then this article is your goldmine!</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="post post-masonry cell-md-4 post-masonry-variant-1 offset-top-60 offset-md-top-0">
+                  <div class="post-wrap"><a class="img-wrap" href="post-page.html"><img class="img-responsive" src="{% static "images/blog2/blog2-masonry-5-570x350.jpg"  %}"   width="570" height="350" alt=""/></a>
+                    <div class="post-body">
+                      <div class="post-meta">
+                        <ul class="list-inline list-inline-lg">
+                          <li><span class="text-middle icon text-primary mdi mdi-calendar"></span><span class="text-middle">2 days ago</span>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-account-outline"></span><a class="text-gray-light text-middle" href="masonry-blog2.html">Jordan Turner</a>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-comment-outline"></span><a class="text-gray-light text-middle" href="post-page.html#comments">2 Comments</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <h4 class="text-bold inset-lg-right-15"><a href="post-page.html">The Importance of Giving in Order to Start Receiving</a></h4>
+                      <p class="inset-lg-right-30">While we all want to be receiving, we oftentimes forget about the importance of giving... This matters not because it's some kind of an exchange market, but rather because the attitude and how that affects your wellbeing and success long-term...</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="post post-masonry cell-md-4 post-masonry-variant-1 offset-top-60 offset-md-top-0">
+                  <div class="post-wrap"><a class="img-wrap" href="post-page.html"><img class="img-responsive" src="{% static "images/blog2/blog2-masonry-2-570x360.jpg"  %}"   width="570" height="360" alt=""/></a>
+                    <div class="post-body">
+                      <div class="post-meta">
+                        <ul class="list-inline list-inline-lg">
+                          <li><span class="text-middle icon text-primary mdi mdi-calendar"></span><span class="text-middle">2 days ago</span>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-account-outline"></span><a class="text-gray-light text-middle" href="masonry-blog2.html">Jordan Turner</a>
+                          </li>
+                          <li><span class="text-middle icon text-primary mdi mdi-comment-outline"></span><a class="text-gray-light text-middle" href="post-page.html#comments">2 Comments</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <h4 class="text-bold inset-lg-right-15"><a href="post-page.html">Finding a Job of Your Dreams is Easy!</a></h4>
+                      <p class="inset-lg-right-30">We've all been there, riding down the job searching, CV sending or a business plan drafting road... But when we're looking for the job of our dreams, we oftentimes confuse our weaknesses for strength and vice versa...</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="offset-top-15 text-md-left offset-md-top-30"><a class="btn btn-primary btn-circle" href="grid-blog2.html">view all blog2 posts</a></div>
+        </div>
+      </section> -->
+      <!-- Page Footer-->
+       <!-- Team fullwidth-->
+       <section class="bg-image bg-image-home-5 section-90 section-md-0" >
+          <div class="shell-fluid-full">
+            <div class="range range-xs-center">
+              <div class="cell-xs-10 cell-md-12">
+                <div class="reveal-md-flex">
+                  <div class="thumbnail-team-2">
+                    <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/africa.png"  %}"   width="384" height="480" alt=""/>
+                    </div>
+                  
+                  </div>
+                  <div class="thumbnail-team-2">
+                    <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/vision.jpg"  %}"   width="384" height="480" alt=""/>
+                    </div>
+                    
+                  </div>
+                  <div class="thumbnail-team-2">
+                    <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/sdg.jpg"  %}"   width="384" height="780" alt=""/>
+                    </div>
+                  
+                  </div>
+               
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+ <!-- Unordered and Ordered Lists-->
+
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- PhotoSwipe Gallery-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="pswp__bg"></div>
+<div class="pswp__scroll-wrap">
+  <div class="pswp__container">
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+  </div>
+  <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__cent"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

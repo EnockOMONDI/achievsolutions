@@ -1,0 +1,298 @@
+{% extends 'achievesolapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="page text-center">
+      <!-- Page Head-->
+      <header class="page-header slider-menu-position">
+              <!-- RD Navbar Transparent-->
+              <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-top-panel rd-navbar-default rd-navbar-white rd-navbar-static-fullwidth-transparent" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="90px" data-lg-stick-up-offset="75px" data-auto-height="false" data-lg-auto-height="true" data-layout="rd-navbar-fixed" data-xs-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                  <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!-- RD Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                      <!-- Navbar Brand-->
+                      <div class="rd-navbar-brand"><img src="{% static "images/3.png"  %}"   class="img-fluid logo" style="width:260px"  alt="img" ></div>
+                    </div>
+                    <div class="rd-navbar-menu-wrap">
+                      <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-mobile-scroll">
+                          <div class="form-search-wrap">
+                            <!-- RD Search Form-->
+                            <form class="form-search rd-search" action="search-results.html" method="GET">
+                              <div class="form-group">
+                                <label class="form-label form-search-label form-label-sm rd-input-label" for="rd-navbar-form-search-widget">Search</label>
+                                <input class="form-search-input input-sm form-control form-control-gray-lightest input-sm" id="rd-navbar-form-search-widget" type="text" name="s" autocomplete="off">
+                              </div>
+                              <button class="form-search-submit" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                          <!-- RD Navbar Nav-->
+                          <ul class="rd-navbar-nav">
+                            <li><a href="{% url 'achievesolapp:home' %}"><span>Home</span></a>
+                           
+                            </li>
+                            <li ><a href="{% url 'achievesolapp:about' %}" ><span>Who we are</span></a>
+                            
+                            </li>
+                            <li><a href="{% url 'achievesolapp:services' %}" ><span>Our Services</span></a>
+                              
+                            </li>
+                            <li class="active"><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
+                            </li>
+                            <li><a href="{% url 'achievesolapp:blog_list' %}"  ><span>Blog</span></a>  
+                            </li>
+                            <li><a href="{% url 'achievesolapp:contact' %}"  ><span>contact</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- RD Navbar Search-->
+                     
+                    </div>
+                  </div>
+                </nav>
+              </div>
+      <!-- Modern Breadcrumbs-->
+      <div class="section-height-800 breadcrumb-modern context-dark text-center breadcrumbs-center">
+        <div class="shell section-bottom-120">
+          <div class="veil reveal-md-block">
+            <h3 class="text-bold">Programs</h3>
+            <ul class="list-inline-custom">
+              <li><a class="icon fa fa-facebook  icon-circle icon-gray-light" href="https://www.facebook.com/achievesol/" target="_blank"></a></li>
+              <li><a class="icon fa fa-twitter  icon-circle icon-gray-lightt" href="https://twitter.com/achievesol" target="_blank"></a></li>
+              <li><a class="icon fa fa-instagram  icon-circle icon-gray-lightg" href="https://www.instagram.com/achievesolutions/" target="_blank"></a></li>
+    
+            </ul>
+          </div>
+          <!-- <ul class="list-inline list-inline-with-arrows p">
+            <li><a class="text-white" href="index.html">HOME</a></li>
+            <li>PROGRAMS
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </header>
+
+    <section class="section-90 section-md-top-90 section-md-bottom-111">
+            <div class="shell-fluid">
+              <div class="range range-xs-center range-md-left text-left">
+                
+                <div class="cell-xs-10 cell-sm-8 cell-md-5 " ><img class="img-responsive" src="{% static "images/pages/istock.jpg"  %}" width="720" height="400" alt=""/> <br>
+                  <div class="cell-xs-10 cell-sm-8 cell-md-5 offset-top-90"><img class="img-responsive" src="{% static "images/pages/istock.jpg"  %}" width="720" height="400" alt=""/>
+                  </div>
+               
+                </div> 
+               
+                <div class="cell-xs-10 cell-sm-8 cell-md-7 offset-top-0 offset-md-top-0">
+                    <h3 class="text-bold text-center">Our programs</h3>
+                  <div class="inset-md-left-36 inset-xl-left-110 offset-top-20">
+                        <div class="responsive-tabs responsive-tabs-classic" data-type="accordion">
+                                <ul class="resp-tabs-list tabs-group-default" data-group="tabs-group-default">
+                                  <li>Student Support Program™ </li>
+                                  <li>Leadership Program </li>
+                                  <li>Life Coaching </li>
+                                  <li>Business Coaching</li>
+                                </ul>
+                                <div class="resp-tabs-container tabs-group-default" data-group="tabs-group-default">
+                                  <div>
+                                   <p>
+
+The program is designed to instil academic and moral discipline, encourage hard work and promote education. Participants enrolled in this program will learn first-hand academic techniques, ideas and concepts that offer academic solutions to learners.
+The program is structured to help students in schools, colleges and universities to achieve their set goals amidst challenges. 
+The program is set  to drive learners to achieve academic excellence and become high performing individuals equipped for success. We encourage small group discussions and interactive sessions with facilitators.
+We engage fully with the students offering feedback sessions and access to a pool of experts. The program can be tailor made to suit special needs of students. From the word achieve, it is clear that  our main goal is to contribute to unlocking the students’ potential by offering solutions.
+We remain committed to investing in students by providing them an opportunity to grow, learn, unlearn and relearn for purposes of producing responsible leaders of today and tomorrow. 
+
+
+
+
+                                   </p>
+                                  </div>
+                                  <div>
+                                   <p>
+                                      The program seeks to mould transformative world - class leaders. The Training is about shaping change makers and solution givers, men and women of  integrity in service. We produce high- performing leaders who are  committed  to lead by example.
+                                      This program is designed for delivering Impactful training on Leadership & High - Performance in public and business enterprises, corporate management, governance, global compact, social good and integrated reporting. At Achieve solutions,  we do apply strategic solution-based and astoundingly effective model to positively turn around any individual, team or organization of any scale. 
+                                      
+                                   </p>
+                                  </div>
+                                  <div>
+                                  <p>
+                                      The interactive process is designed to assist participants to access their own personal resources, capabilities and qualities to achieve defined goals. We encourage people to gain the confidence and ability to break down the  barriers, which prevent them from moving forward in a positive manner in life.
+                                  </p>
+                                  </div>
+                                  <div>
+                                 <p>
+                                    This coaching programme is for entrepreneurs and innovators. It is designed to equip youth with relevant skills to start, grow and expand businesses . At the end of the programme, participants develop skills and capabilities to run and grow successful enterprises.  
+
+                                    In order to establish the areas that require attention or improvement,  initial assessment process with clients is conducted. Information gathered during diagnosis, coupled with relevant research, programs are tailored to tackle the specific needs of our clients. After Implementation, we also recommend follow- up, which helps to reveal the extent and quality of service.
+                                    
+                                    This program gives participants a whole new set of skills in enterprise and access to highly effective business tools that can be used in a competitive business world.
+                                    
+                                    We also empower entrepreneurs by directly connecting them with established business professionals – who provide knowledge, experience, networks and other relevant business opportunitie
+                                    
+                                 </p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                             
+                              <div class="responsive-tabs responsive-tabs-classic" data-type="accordion">
+                                    <ul class="resp-tabs-list tabs-group-default" data-group="tabs-group-default">
+                                      <li>Mentorship   </li>
+                                      <li>SDG’s Awareness Platform</li>
+                                      <li>CSR program</li>
+                                    </ul>
+                                    <div class="resp-tabs-container tabs-group-default" data-group="tabs-group-default">
+                                      <div>
+                                     <p>
+                                        The power of mentorship has been around for some time. At certain points in our lives, we all need someone to hold our hand, to guide and  direct us in the right direction. Having people in your environment such as a mentor can make a huge difference.
+
+                                        We exist to guide individuals, support, engage and equip teams with cutting edge tools that accelerate them to achieve better results. Our mentors will create time for you  and commit to  bring you up.
+                                        
+                                        At Achieve solutions, you will hear from mentors with strong advice, insights, wisdom and  amazing ideas that will make a huge difference and transform your life.
+                                        
+                                     </p>
+                                      </div>
+                                      <div>
+                                     <p>
+                                        We promote awareness on Sustainable Development Goals (SDGs) and tap into productive capacity of youth as a great resource for Sustainable Development. Youth have great potential and they are critical to achieving the SDGs. The sessions are designed to equip youth, Young professionals, leaders, entrepreneurs, innovators and the larger community to positively engage and actively participate in achievement of the global goals. Here participants have access to a pool of networks to foster partnerships for achieving the SDGs
+                                     </p>
+                                      </div>
+                                      <div>
+                                      <p>
+                                          At Achieve solutions, we partner with like minded individuals and organizations under the ‘Rise from Slums Initiative.’ 
+We inspire individuals and support communities. We are passionate about giving back to society as we work together to protect mother earth through green activities in line with the sustainable development goals. We are all about investing in people with an aim of making a difference in our communities.
+</p>
+                                      </div>
+                                     
+                                      </div>
+                                    </div>
+                                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+            <!-- RD Parallax-->
+      <section class="bg-image bg-fixed" style="background-image: url({% static "images/pages/adults2.jpg)"  %}">
+        <div class="shell-fluid section-90 section-md-120 context-dark text-center">
+          <div class="range range-sm-center list-dashed-big" >
+            <div class="cell-sm-2" >
+              <!-- CountTo-->
+              <div class="h1 font-default"style="color:#110070;" >
+                <div class="counter big text-ubold" style="color:#ff8c00;" data-from="0" data-to="60 "></div>
+              </div>
+              <div class="text-primary-light offset-top-20"  style="color:#ff8c00;">Motivational Talks</div>
+            </div>
+            <div class="cell-sm-2 offset-top-60 offset-sm-top-0">
+              <!-- CountTo-->
+              <div class="h1 font-default">
+                <div class="counter  big text-ubold"  style="color:#ff8c00;" data-from="0" data-to="12 "></div>
+              </div>
+              <div class="text-primary-light offset-top-20" style="color:#ff8c00;">Conferences & Networking Events</div>
+            </div>
+            <div class="cell-sm-2 offset-top-60 offset-sm-top-0">
+              <!-- CountTo-->
+              <div class="h1 font-default">
+                <div class="counter big text-ubold" data-from="0" data-to="35"  style="color:#ff8c00;"></div>
+              </div>
+              <div class="text-primary-light offset-top-20"  style="color:#ff8c00;">Training</div>
+            </div>
+            <div class="cell-sm-2 offset-top-60 offset-sm-top-0">
+              <!-- CountTo-->
+              <div class="h1 font-default">
+                <div class="counter big text-ubold" data-from="0" data-to="35" style="color:#ff8c00;"></div>
+              </div>
+              <div class="text-primary-light offset-top-20" style="color:#ff8c00;" >Workshops & Seminars</div>
+            </div>
+            <div class="cell-sm-2 offset-top-60 offset-sm-top-0">
+              <!-- CountTo-->
+              <div class="h1 font-default">
+                <div class="counter counter-k big text-ubold" data-from="0" data-to="6"  style="color:#ff8c00;"></div>
+              </div>
+              <div class="text-primary-light offset-top-20"  style="color:#ff8c00;">People Motivated</div>
+            </div>
+            <div class="offset-top-90 offset-xl-top-120"><a class="btn btn-primary btn-circle"  style="box-shadow: 0 6px 22px 0 #000000;"href="bookingappointement.html">make an appointment</a></div>
+          </div>
+        </div>
+      </section>
+
+          <section class="section-90 section-md-0" >
+            <div class="shell-fluid-full">
+              <div class="range range-xs-center">
+                <div class="cell-xs-10 cell-md-12">
+                  <div class="reveal-md-flex">
+                    <div class="thumbnail-team-2">
+                      <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/africa.png"  %}"  "{% static "images/3.png" %}"   width="384" height="480" alt=""/>
+                      </div>
+                    
+                    </div>
+                    <div class="thumbnail-team-2">
+                      <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/vision.jpg"  %}" width="384" height="480" alt=""/>
+                      </div>
+                      
+                    </div>
+                    <div class="thumbnail-team-2">
+                      <div class="image-wrap"><img class="img-responsive" src="{% static "images/gallery/githogoro/sdg.jpg"  %}" width="384" height="480" alt=""/>
+                      </div>
+                    
+                    </div>
+                 
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+
+
+ <!-- Unordered and Ordered Lists-->
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock%}
