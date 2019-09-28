@@ -122,7 +122,7 @@
                   <div class="row" data-photo-swipe-gallery="gallery">
                       {% for media in medias %}
                         <div class="col-xs-12 col-sm-6 col-md-4 isotope-item" data-filter="Type 1"><a class="thumbnail-custom" data-photo-swipe-item="" data-size="1200x800" href="{% if media.image %} {{ media.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"  style="box-shadow: 0 6px 22px 0 #414141;">
-                            <figure ><img class="img-responsive" width="270" height="100" src="{% if media.image %} {{ media.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" alt=""/>
+                            <figure ><img style="border-radius: 8px;"  class="img-responsive" width="270" height="100" src="{% if media.image %} {{ media.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" alt=""/>
                             </figure></a>
                         </div>
         

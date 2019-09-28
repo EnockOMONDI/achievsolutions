@@ -95,7 +95,7 @@
 
 
 <!--  Empowerment Motivation Transformation -->
- <section style="border-bottom: 1px solid #ff7b00; border-top: 1px solid #ff7b00"   class="bg-image bg-image-home-2 section-40 section-md-40 "  >
+ <section style="border-bottom: 1px solid #ff7b00; border-top: 1px solid #ff7b00"   class="bg-image bg-qua-haze section-40 section-md-40 "  >
      <div class="inset-lg-left-51 inset-lg-right-51 offset-top-0" >
           <div class="shell-fluid-full">
              <div>
@@ -110,7 +110,7 @@
 
  
 <!-- what we do -->
-<section class="bg-image bg-image-home-2 section-40 section-md-top-30 section-md-bottom-30 ">
+<section class="bg-image bg-qua-haze section-40 section-md-top-30 section-md-bottom-30 ">
    <h3 class="text-bold text-center ">What we do</h3><br>
       <div class="inset-md-left-50 inset-md-right-50 ">
          <p >We provide training and personal development services that address specific needs and achieve positive outcomes. We assist individuals to access their own personal resources, capabilities and qualities to achieve defined goals. Our strategy and objectives relate to People Empowerment, Team Development & Organization Success. At achieve solutions, we deal with your challenges today and reshape your future now.
@@ -130,7 +130,7 @@
                           <ul class="details">
                           </ul>
                       </div>
-                       <div class="description">
+                       <div class="description  meta">
                           <h1>Motivational Talks</h1> 
                           <p> <br> We motivate, challenge, empower and transform our audience. Our talks will ignite you and make you bigger than your life challenge(s).  At achieve Solutions we strongly remind people not to  give up as we work with them to achieve defined goals. As an organization we believe that everyone has immense ability to change their lives for better. At Achieve Solutions, we support you every step of the way as we boost your confidence & uplift your spirit. The talks are simply inspirational.</p>
           
@@ -153,7 +153,7 @@
                              <ul class="details">
                              </ul>
                          </div>
-                          <div class="description">
+                          <div class="description  meta">
                              <h1>Workshops, Seminars,Conference and Networking</h1>
                              <p>We hold theme based events and share knowledge, theories and practices to equip individuals, teams and organizations to stay one step ahead of the competition. We focus on moulding and building the capacity of individuals, staff members, innovators, entrepreneurs and young professionals for knowledge, wisdom, skills building and excellent learning experience.</p>
                           </div>
@@ -175,7 +175,7 @@
                                <ul class="details">
                                </ul>
                            </div>
-                            <div class="description">
+                            <div class="description  meta">
                                <h1>Team – Building Facilitation </h1>
                                  <p>We support individuals, teams and organizations to harness their collective energy and to develop a “Togetherness brain” approach that improves the way we supervise, manage, lead and relate as teams.
                                     
@@ -194,17 +194,20 @@
              
      
                          <div class="blog2-card " >
-                           <div class="meta">
-                           <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
-                               <ul class="details">
-                               </ul>
-                           </div>
-                            <div class="description">
+                          
+                          
+                                <div class="meta">
+                                    <div class="photo" style="background-image:  url({% static "images/pages/home-3-570x420.jpg)"  %}"></div>
+                                        <ul class="details">
+                                        </ul>
+                                    </div>
+                                    <div class="description  meta">
                                <h1>Training </h1>
                                 <p>We offer impactful cutting edge training. Our creative and innovative methodologies create a lasting environment for learning. Be part of goal achievers at achieve solutions where training solutions are shared with passion and commitment.
-                              <br><br><br>
+                              <br><br>
                                 </p>
                             </div>
+                          
                           </div>
                        </div>   
                      </div>
@@ -216,7 +219,7 @@
            <!--End of Training area --> 
                                      <div class="offset-top-30 offset-xl-top-55">
                                        <div class="group text-center">
-                                           <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #494949;" href="{% url 'achievesolapp:services' %}">view all Services</a></div>
+                                           <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.5);" href="{% url 'achievesolapp:services' %}">view all Services</a></div>
                                         </div>
                                        </div>
 
@@ -229,7 +232,7 @@
 
 
   <!-- events -->
-<section class="bg-image bg-image-home-2 section-60 section-sm-40">
+<section class="bg-image bg-qua-haze section-60 section-sm-40">
     <div class="shell-fluid">
           <h3 class="text-bold text-center "  >Upcoming Events</h3>
             
@@ -237,35 +240,82 @@
                 
                     <div class="cell-xl-10">
               <!-- Owl Carousel-->
-              {% for event in events %} 
+             
                         <div class="owl-carousel owl-carousel-nav-pos-xl text-left" data-autoplay="true"  data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-lp-items="5" data-stage-padding="15px" data-md-stage-padding="0" data-loop="true" data-margin="30" data-md-margin="10px" data-mouse-drag="false" data-nav="true" data-animation-in="fadeIn" data-animation-out="fadeIn">
                           
                           <div>  
-                                         
+                   
                               <article class="post-event-minimal">
-                                 <div class="post-body">
-                                     <h6 class="text-bold"><a href="events.html"> {{ event.name }} </a>  </h6>
-                                       <ul> 
-                                         <li><span class="icon mdi fa fa-meetup text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark">{{ event.venue }}</span></li>
-                                         <li><span class="icon mdi mdi-map-marker text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark">  {{ event.location }}</span></li>
-                                         <li><span class="icon mdi mdi-calendar text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> {{ event.date }} </span></li>
-                                       </ul>
-                                   <div class="post-bottom">
-                                   <div class="group">
-                                   <div><a class="btn btn-xs btn-circle btn-matrix" href="events.html">see details</a></div>
-
+                                  <div class="post-body">
+                                    <h5 class="text-bold"><a href="events.html"></a> Impact leadership training <br>
+                                      (One day training )</h5>
+                                    <ul>
+                                        <li><span class="icon mdi fa fa-meetup text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark">Serena Hotel, Nairobi</span></li>  
+                                        <li><span class="icon mdi mdi-map-marker text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> Nairobi</span></li>
+                                      <li><span class="icon mdi mdi-calendar text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> October, 5th</span></li>
+                                    </ul>
+                                    <div class="post-bottom">
+                                      <div class="group">
+                                        <div><a class="btn btn-xs btn-circle btn-matrix" href="events.html">see details</a></div>
+                                        <div><a class="btn btn-round btn-primary" href="events.html"><span class="icon icon-sm fa-info"></span></a></div>
+                                      </div>
+                                    </div>
                                   </div>
-                                  </div>
-                                  </div>
-                              </article>  
-                                        
+                                </article>
+                           
                           </div>  
+
+                          <div>  
+                   
+                              <article class="post-event-minimal">
+                                  <div class="post-body">
+                                    <h5 class="text-bold"><a href="events.html"></a> Unleash your Pearl<br>
+                                      (Talk)</h5>
+                                    <ul>
+                                        <li><span class="icon mdi fa fa-meetup text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> PBC , Nairobi</span></li>  
+                                        <li><span class="icon mdi mdi-map-marker text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> Nairobi</span></li>
+                                      <li><span class="icon mdi mdi-calendar text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> October, 12th</span></li>
+                                    </ul>
+                                    <div class="post-bottom">
+                                      <div class="group">
+                                        <div><a class="btn btn-xs btn-circle btn-matrix" href="events.html">see details</a></div>
+                                        <div><a class="btn btn-round btn-primary" href="events.html"><span class="icon icon-sm fa-info"></span></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                           
+                          </div> 
+
+
+
+                          <div>  
+                   
+                              <article class="post-event-minimal">
+                                  <div class="post-body">
+                                    <h5 class="text-bold"><a href="events.html"></a> Building change makers<br>
+                                      (Talk)</h5>
+                                    <ul>
+                                        <li><span class="icon mdi fa fa-meetup text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> To be updated</span></li>  
+                                        <li><span class="icon mdi mdi-map-marker text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> Nairobi</span></li>
+                                      <li><span class="icon mdi mdi-calendar text-dusty-gray text-middle"></span><span class="text-middle text-gray-dark"> November, 2nd</span></li>
+                                    </ul>
+                                    <div class="post-bottom">
+                                      <div class="group">
+                                        <div><a class="btn btn-xs btn-circle btn-matrix" href="events.html">see details</a></div>
+                                        <div><a class="btn btn-round btn-primary" href="events.html"><span class="icon icon-sm fa-info"></span></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                           
+                          </div> 
                                 
                          </div> 
-                         {% endfor %}          
-                                     <div class="offset-top-30 offset-xl-top-55">
+                                  
+                                     <div class="offset-top-0 offset-xl-top-55">
                                         <div class="group">
-                                       <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #494949;" href="{% url 'achievesolapp:product_list' %}">view all Events</a></div>               
+                                       <div><a class="btn btn-circle btn-primary" style="box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.5);" href="{% url 'achievesolapp:product_list' %}">view all Events</a></div>               
                                        </div>
                                      </div>
                                  
@@ -317,8 +367,8 @@
                     </div>
                     <div class="profile2-main">
                         <h2 class="profile2-name">Nelson Mandela</h2>
-                        <p class="profile2-position">Political leader - South African First black head of state</p>
-                        <p class="profile2-body"> "Education is the most powerful weapon which you can use to change the world."</p>
+                        <p class="text-bold">Political leader - South African First black head of state</p>
+                        <p class=""> "Education is the most powerful weapon which you can use to change the world."</p>
                     </div>
                 </div>
               </div>
@@ -333,8 +383,8 @@
                       </div>
                       <div class="profile2-main">
                           <h2 class="profile2-name">Eluid Kipchoge Keino</h2>
-                          <p class="profile2-position">Kenyan long distance runner</p>
-                          <p class="profile2-body"> "Passion is a choice. You need to choose to be great. It's not a chance, it's a choice."</p>
+                          <p class="text-bold">Kenyan long distance runner</p>
+                          <p class=""> "Passion is a choice. You need to choose to be great. It's not a chance, it's a choice."</p>
                       </div>
                   </div>
                 </div>
@@ -349,8 +399,8 @@
                       </div>
                       <div class="profile2-main">
                           <h2 class="profile2-name">Wangari Maathai</h2>
-                          <p class="profile2-position">Social, environmental activist & first African woman to win the Nobel Prize</p>
-                          <p class="profile2-body"> "There are opportunities even in the most difficult moments."</p>
+                          <p class="text-bold">Social, environmental activist & first African woman to win the Nobel Prize</p>
+                          <p class=""> "There are opportunities even in the most difficult moments."</p>
                       </div>
                   </div>
                 </div>
@@ -364,8 +414,8 @@
                         </div>
                         <div class="profile2-main">
                             <h2 class="profile2-name">William Barclay</h2>
-                            <p class="profile2-position">Scottish author, radio and television presenter, Church of Scotland minister, and Professor of Divinity and Biblical Criticism at the University of Glasgow.</p>
-                            <p class="profile2-body"> "Endurance is not just the ability to bear a hard thing, but to turn it into glory."</p>
+                            <p class="text-bold">Scottish author, radio and television presenter, Church of Scotland minister, and Professor of Divinity and Biblical Criticism at the University of Glasgow.</p>
+                            <p class=""> "Endurance is not just the ability to bear a hard thing, but to turn it into glory."</p>
                         </div>
                     </div>
                   </div>
@@ -378,8 +428,8 @@
                           </div>
                           <div class="profile2-main">
                               <h2 class="profile2-name">Barrack Obama</h2>
-                              <p class="profile2-position">44th president of the United States</p>
-                              <p class="profile2-body"> "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek."</p>
+                              <p class="text-bold">44th president of the United States</p>
+                              <p class=""> "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek."</p>
                           </div>
                       </div>
                     </div>
@@ -393,8 +443,8 @@
                         </div>
                         <div class="profile2-main">
                             <h2 class="profile2-name">Marie curie</h2>
-                            <p class="profile2-position">First woman to win a Nobel Prize</p>
-                            <p class="profile2-body"> "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less."</p>
+                            <p class="text-bold ">First woman to win a Nobel Prize</p>
+                            <p class=""> "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less."</p>
                         </div>
                     </div>
                   </div>
