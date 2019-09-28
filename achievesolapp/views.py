@@ -82,5 +82,11 @@ def videos(request):
 def contact(request):
   return render(request, 'achievesolapp/app/contact.html')
 
-  
+def events404(request):
+  return render(request, 'achievesolapp/app/events404.html')
 
+def appointement(request):
+  return render(request, 'achievesolapp/app/bookingappointement.html')
+
+def eventbooking(request):
+  return render(request, 'achievesolapp/app/bookingevent.html')

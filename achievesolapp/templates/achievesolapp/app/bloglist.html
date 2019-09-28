@@ -48,7 +48,7 @@
                             </li>
                             <li><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
                             </li>
-                            <li><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                            <li><a href="{% url 'achievesolapp:blog_list' %}" ><span>Events</span></a>
                             </li>
                             <li><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
                             </li>
@@ -154,12 +154,33 @@
             </section>
           </article>
           {% endfor %}
+  
+         
+          <div class="container-fluid">
+              <div class="cell-xs-10 cell-sm-12 cell-lg-6 cell-xl-preffix-1">
+              <div class="row">
+                {% if blogs%}
+                {% else %}
+                <div class="col-md-8 text-center"> 
+                  <h1 style="font-family: 'Work Sans', sans-serif; color: rgb(37, 37, 37);"><strong> Sorry !! </strong>There are currently no blogs in selected category updated on the Portal. Kindly visit some other time.</h1>
+  
+                 </div>
+                 
+                  <br>
+                 
+                {% endif %}
+            
+              </div>
+           </div>
+          
+        </div>
           <div class="offset-top-90">
             <!-- Classic Pagination-->
-           
+   
           </div>
           
         </div>
+
   
         <div class="cell-xs-8 cell-sm-12 offset-top-60 offset-lg-top-0 text-left cell-lg-4">
           <div class="inset-lg-left-30 inset-xl-left-147">
