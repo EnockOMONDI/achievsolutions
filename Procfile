@@ -1,1 +1,1 @@
-web: gunicorn acahievesolutions.wsgi --log-file -
+web: gunicorn achievesolutions.wsgi --log-file -
