@@ -104,7 +104,7 @@
             <article class="post post-event"><a class="post-image-wrap" href="#">
                 <div class="post-event-date">
                   <div></div>{{ event.date }}
-                </div><img class="img-responsive" src="{% static "images/pages/events-1-570x330.jpg"  %}"  width="570" height="330" alt=""/></a>
+                </div><img class="img-responsive" src="{% if event.image %} {{ event.image.cdn_url }} {% else %} {% static 'images/blogdefault.jpg' %} {% endif %}"  width="570" height="330" alt=""/></a>
               <h4 class="text-bold"><a href="#">{{ event.name }}</a></h4>
               <h4 >{{ event.brief_description }}</h4>
               <ul class="list-inline list-inline-md">
