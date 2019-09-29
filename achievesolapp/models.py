@@ -102,7 +102,7 @@ class Event(models.Model):
    
      
     class Meta:
-        ordering = ('name', )
+        ordering = ('date', )
         index_together = (('id', 'slug'),)
 
     def __str__(self):
