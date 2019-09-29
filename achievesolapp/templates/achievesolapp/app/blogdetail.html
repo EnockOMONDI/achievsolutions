@@ -36,27 +36,28 @@
                           </div>
                           <!-- RD Navbar Nav-->
                           <ul class="rd-navbar-nav">
-                            <li ><a href="index.html"><span>Home</span></a>
-                           
-                            </li>
-                            <li><a href="about.html"><span>About</span></a>
-                            
-                            </li>
-                            <li><a href="services.html"><span>Our services</span></a>
+                              <li><a href="{% url 'achievesolapp:home' %}"><span>Home</span></a>
+                             
+                              </li>
+                              <li><a href="{% url 'achievesolapp:about' %}" ><span>Who we are</span></a>
                               
-                            </li>
-                            <li><a href="programs.html"><span>Our programs</span></a>
-                            </li>
-                            <li><a href="events.html"><span>Events</span></a>
-                            </li>
-                            <li><a href="gallery.html"><span>Gallery</span></a>
-                            </li>
-                            <li class="active" ><a href="blog.html"><span>Blog</span></a>  
-                            </li>
-                            <li><a href="contact.html"><span>contact</span></a></li>
-                          </ul>
+                              </li>
+                              <li><a href="{% url 'achievesolapp:services' %}" ><span>Our Services</span></a>
+                                
+                              </li>
+                              <li><a href="{% url 'achievesolapp:programs' %}" ><span>Our programs</span></a>
+                              </li>
+                              <li ><a href="{% url 'achievesolapp:product_list' %}" ><span>Events</span></a>
+                              </li>
+                              <li><a href="{% url 'achievesolapp:media_list' %}" ><span>Gallery</span></a>
+                              </li>
+                              <li class="active"><a   href="{% url 'achievesolapp:blog_list' %}"  ><span>Blog</span></a>  
+                              </li>
+                              <li><a href="{% url 'achievesolapp:contact' %}"  ><span>contact</span></a></li>
+                            </ul>
+                          </div>
                         </div>
-                      </div>
+                        <!-- RD Navbar Search-->
                       <!-- RD Navbar Search-->
                      
                     </div>
