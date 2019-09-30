@@ -3,26 +3,62 @@
 
 {% block content %}
     <div class="page text-center">
-      <!-- Page Contents-->
+ 
       <section class="page-content bg-gray-dark bg-gray-gradient-after">
         <div class="one-page">
           <div class="shell">
             <div class="one-page-header">
-              <!--Navbar Brand-->
+         
               <div class="rd-navbar-brand"><img src="{% static "images/3.png" %}"  class="img-fluid logo" style="width:260px"  alt="img" ></div>
             </div>
           </div>
-          <!-- 404-->
+         
           <div class="context-dark">
             <div class="shell">
               <div class="range">
                 <div class="section-160 section-md-111 section-cover range range-xs-center range-xs-middle">
                   <div class="cell-lg-12">
-                    <div class="text-extra-big text-ubold text-primary"></div>
+                      <div class="shell-fluid">
+                          <!-- <div class="group-xl offset-top-0 offset-md-top-0"></div>
+                                  </div> -->
+                          <ul class="list-inline "> 
+                              <!-- <li><h5 class=" text-bold text-center" style="color:#ff8c00">Upcoming Events</h5> </li>
+                              <li> <h5 class=" text-bold text-center"style="color:#ff8c00" >Past Events</h5></li>  -->
+                        <li><a class="btn btn-primary btn-circle"  style="box-shadow: 0 6px 22px 0 #575656;" href="{% url 'achievesolapp:product_list' %}"  >Upcoming events</a></li> 
+                        <li><a class="btn btn-primary-outline btn-circle"  style="box-shadow: 0 6px 22px 0 #575656;"  href="{% url 'achievesolapp:events404' %}" >Past events</a></li>
+                        
+                </ul>
+                        <div class="range range-xs-center range-md-left text-left">
+                          
+                          <div class="cell-xs-10 cell-sm-8 cell-md-4">
+                            <article class="post post-event"><a class="post-image-wrap" href="#">
+                                <div class="post-event-date">
+                                  <div></div> July 28th 2019
+                                </div><img class="img-responsive" src="{% if event.image %} {{ event.image.cdn_url }} {% else %} {% static 'images/blogdefault.jpg' %} {% endif %}"  width="570" height="330" alt=""/></a>
+                              <h4 class="text-bold"><a href="#"> MaryHill Girls High School Motivational Talk and Mentorship</a></h4>
+                              <h4 >Achieve Solutions Talk and Mentorship with a difference</h4>
+                              <ul class="list-inline list-inline-md">
+                                <li><span class="icon mdi mdi-clock text-middle"></span>
+                                  <time class="text-middle" datetime="2016-04-30"> 12pm , 4pm   </time> 
+                                </li>
+                
+                               
+                
+                                <li><span class="icon mdi mdi-map-marker text-middle"></span><span class="text-middle"> MaryHill Girls High School </span></li>
+                                <li><span class="icon mdi mdi-ticket text-middle"></span><span class="text-middle"> </span></li>
+                              </ul>
+                              <!-- <a class="btn btn-circle btn-primary" style="box-shadow: 0 6px 22px 0 #575656;"  href="{% url 'achievesolapp:eventbooking' %}" >book now</a> -->
+                            </article>
+                          </div>
+                               {% endfor %} 
+                          
+                        </div>
+                      </div>
+                    <!-- <div class="text-extra-big text-ubold text-primary"></div>
                     <h2 class="text-bold offset-top-30 offset-md-top-60">No past event found</h2>
                     <div class="offset-top-20">
                       <h6 class="text-silver"></h6>
-                    </div>
+                    </div> -->
                     <div class="group-xl offset-top-30 offset-md-top-70"><a class="btn btn-primary btn-circle"  style="box-shadow: 0 6px 22px 0 #161616;" href="{% url 'achievesolapp:product_list' %}" >back to events</a><a class="btn btn-white-outline btn-circle"  style="box-shadow: 0 6px 22px 0 #161616;"  href="{% url 'achievesolapp:contact' %}" >contact us</a></div>
                   </div>
                 </div>
@@ -34,7 +70,7 @@
               <p class="text-white-05">
                 Achieve solutions 
                 &#169;<span id="copyright-year"></span> Design by <a class="text-alto" href="http://www.brainlabs.co.ke/" target="_blank"> brain Labs
-                  <!-- {%FOOTER_LINK}--></a>
+               </a>
               </p>
             </div>
           </div>
