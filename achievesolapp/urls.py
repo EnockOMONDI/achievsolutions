@@ -20,9 +20,8 @@ urlpatterns = [
     url(r'^contact/', views.contact, name='contact'),
     url(r'^appointement/', views.appointement, name='appointement'),
     url(r'^eventbooking/', views.eventbooking, name='eventbooking'),
-     url(r'^(?P<blogcategory_slug>[-\w]+)/$', views.blog_list, name='blog_list_by_category'),
-    url(r'^(?P<mediacategory_slug>[-\w]+)/$', views.media_list, name='media_list_by_category'),  
-   
+    url(r'^(?P<mediacategory_slug>[-\w]+)/$', views.media_list, name='media_list_by_category'), 
+    url(r'^(?P<blogcategory_slug>[-\w]+)/$', views.blog_list, name='blog_list_by_category'), 
     url(r'^(?P<id>\d+)/(?P<blogcategory_slug>[-\w]+)/$', views.blog_detail, name='blog_detail'),
    
    
